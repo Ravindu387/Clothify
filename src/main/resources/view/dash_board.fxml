@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.dashboard.EmployeeDashboard">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d47a1" height="600.0" stroke="TRANSPARENT" strokeType="INSIDE" width="243.0" />
+      <Circle fill="#0d47a1" layoutX="112.0" layoutY="85.0" radius="71.0" stroke="#2e26262b" strokeType="INSIDE" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="36.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/bussiness-man.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="22.0" layoutY="172.0" text="E.Type:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="220.0" text="Name :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtEtype" layoutX="77.0" layoutY="172.0" text="Admin" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtName" layoutX="76.0" layoutY="220.0" text="Ravindu Nimsara" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="288.0" layoutY="29.0" text="Dashboard" textFill="#0d47a1">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" layoutX="385.0" layoutY="74.0" startX="-100.0" stroke="#0d47a1" />
+      <Label layoutX="23.0" layoutY="196.0" text="E.ID    :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtId" layoutX="76.0" layoutY="196.0" text="E000" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="491.0" text="Date :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" layoutX="97.0" layoutY="492.0" text="2023-11-11" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="532.0" text="Time :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTime" layoutX="111.0" layoutY="532.0" text="09:34:59" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="247.0" text="Email  :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtEmail" layoutX="77.0" layoutY="247.0" text="ravindu@gmail.com" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="441.0" layoutY="224.0" prefHeight="55.0" prefWidth="243.0" style="-fx-background-color: #0d47a1; -fx-background-radius: 30;" text="ITEM" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="441.0" layoutY="300.0" prefHeight="55.0" prefWidth="243.0" style="-fx-background-color: #0d47a1; -fx-background-radius: 30;" text="SUPPLIER" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="441.0" layoutY="376.0" onAction="#btnOnActionEmployee" prefHeight="55.0" prefWidth="243.0" style="-fx-background-color: #0d47a1; -fx-background-radius: 30;" text="EMPLOYEE" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="441.0" layoutY="150.0" prefHeight="55.0" prefWidth="243.0" style="-fx-background-color: #0d47a1; -fx-background-radius: 30;" text="ORDERS" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="441.0" layoutY="452.0" prefHeight="55.0" prefWidth="243.0" style="-fx-background-color: #0d47a1; -fx-background-radius: 30;" text="REPORTS" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
