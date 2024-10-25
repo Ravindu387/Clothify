@@ -12,9 +12,10 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 @Entity
-public class EmployeeEntity {
+public class ItemEntity {
     @Id
-    private String  email;
-    private String  fName;
-    private String  password;
+    private String itemCode;
+    private String description;
+    private int qyt;
+    private double unitPrice;
 }

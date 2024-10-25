@@ -20,17 +20,17 @@
                 <Font size="71.0" />
             </font>
         </Label>
-        <JFXTextField fx:id="txtName" alignment="CENTER" layoutX="528.0" layoutY="291.0" prefHeight="39.0" prefWidth="302.0" promptText="Enter Your Name">
+        <JFXTextField fx:id="txtName" alignment="CENTER" layoutX="534.0" layoutY="241.0" prefHeight="39.0" prefWidth="302.0" promptText="Enter Your Name">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font>
         </JFXTextField>
-        <JFXTextField fx:id="txtEmail" alignment="CENTER" layoutX="530.0" layoutY="348.8" prefHeight="39.0" prefWidth="302.0" promptText="Enter Your Email" AnchorPane.topAnchor="348.8">
+        <JFXTextField fx:id="txtEmail" alignment="CENTER" layoutX="536.0" layoutY="298.0" prefHeight="39.0" prefWidth="302.0" promptText="Enter Your Email" AnchorPane.topAnchor="298.0">
             <font>
                 <Font name="System Bold" size="17.0" />
             </font>
         </JFXTextField>
-        <JFXButton layoutX="581.0" layoutY="510.0" onAction="#btnOnActionCreateAccount" prefHeight="39.0" prefWidth="207.0" style="-fx-background-color: #0D47A1; -fx-background-radius: 20;" text="Create an account" textFill="WHITE">
+        <JFXButton layoutX="587.0" layoutY="460.0" onAction="#btnOnActionCreateAccount" prefHeight="39.0" prefWidth="207.0" style="-fx-background-color: #0D47A1; -fx-background-radius: 20;" text="Create an account" textFill="WHITE">
             <font>
                 <Font name="System Bold" size="14.0" />
             </font>
@@ -40,25 +40,20 @@
                 <Font size="14.0" />
             </font>
         </Label>
-      <JFXTextField fx:id="txtPassword" alignment="CENTER" layoutX="530.0" layoutY="404.0" prefHeight="39.0" prefWidth="302.0" promptText="Enter Your Password" AnchorPane.topAnchor="404.0">
+      <JFXTextField fx:id="txtPassword" alignment="CENTER" layoutX="536.0" layoutY="354.0" prefHeight="39.0" prefWidth="302.0" promptText="Enter Your Password" AnchorPane.topAnchor="354.0">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </JFXTextField>
-      <Label alignment="TOP_LEFT" layoutX="534.0" layoutY="453.0" prefHeight="20.0" prefWidth="318.0" text="(8 characters or more, including numbers, letters,">
+      <Label alignment="TOP_LEFT" layoutX="540.0" layoutY="403.0" prefHeight="20.0" prefWidth="318.0" text="(8 characters or more, including numbers, letters,">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <Label alignment="TOP_LEFT" layoutX="534.0" layoutY="467.0" prefHeight="20.0" prefWidth="318.0" text=" and symbols)">
+      <Label alignment="TOP_LEFT" layoutX="540.0" layoutY="417.0" prefHeight="20.0" prefWidth="318.0" text=" and symbols)">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtId" alignment="CENTER" layoutX="529.0" layoutY="236.0" prefHeight="39.0" prefWidth="302.0" promptText="Enter Your ID">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
-      </JFXTextField>
     </children>
 </AnchorPane>

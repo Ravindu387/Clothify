@@ -1,25 +1,23 @@
 package repository.custom.impl;
 
 
-import controllers.account.LoginPageController;
 import db.DBConnection;
-import dto.Employee;
+import dto.Item;
 import dto.User;
 import entity.EmployeeEntity;
+import entity.UserEntity;
+import javafx.collections.ObservableList;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import repository.custom.EmployeeDao;
-import service.custom.EmployeeService;
 import service.custom.impl.EmployeeServiceImpl;
+import service.custom.impl.UserServiceImpl;
 import utill.HibernateUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class EmployeeDaoImpl implements EmployeeDao {
@@ -33,6 +31,11 @@ public class EmployeeDaoImpl implements EmployeeDao {
         session.getTransaction().commit();
         session.close();
         return false;
+    }
+
+    @Override
+    public ObservableList<EmployeeEntity> getAll() {
+        return null;
     }
 
     @Override
@@ -50,6 +53,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
             System.out.println(password+"  "+passwordE);
             this.validPassword=password;
             EmployeeServiceImpl.getInstance().validate(password,passwordE);
+            UserServiceImpl.getInstance().setEmail(email);
             transaction.commit();
             session.close();
             return password;
@@ -60,8 +64,54 @@ public class EmployeeDaoImpl implements EmployeeDao {
         }
     }
 
+    @Override
+    public boolean deleteEmployee(String email) {
+        return false;
+    }
+
+    @Override
+    public boolean updateEmployee(User user) {
+        return false;
+    }
+
+    @Override
+    public UserEntity setUserDetails() {
+        return null;
+    }
+
+    @Override
+    public void setEmail(String email) {
+        String sql = "UPDATE useremail SET email=? ";
+        try {
+            Connection connection = DBConnection.getInstance().getConnection();
+            PreparedStatement statement = connection.prepareStatement(sql);
+
+            statement.setString(1, email);
 
 
+            int rowsAffected = statement.executeUpdate();
+            if (rowsAffected > 0) {
+                System.out.println("Update successful. Rows affected: " + rowsAffected);
+            } else {
+                System.out.println("No rows were updated. Email not found: ");
+            }
+
+            statement.close();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public boolean deleteItem(String code) {
+        return false;
+    }
+
+    @Override
+    public boolean updateItem(Item item) {
+        return false;
+    }
 
 
 }

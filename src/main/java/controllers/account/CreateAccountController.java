@@ -59,7 +59,6 @@ public class CreateAccountController {
         String password = txtPassword.getText();
         String encrypted = encrypt(password);
         Employee employee = new Employee(
-                    txtId.getText(),
                     txtName.getText(),
                     txtEmail.getText(),
                    encrypted
@@ -70,6 +69,9 @@ public class CreateAccountController {
         }else {
             new Alert(Alert.AlertType.INFORMATION,"Employee Added !!").show();
         }
+        txtEmail.setText("");
+        txtName.setText("");
+        txtPassword.setText("");
     }
 
 }

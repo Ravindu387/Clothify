@@ -1,32 +1,35 @@
-package controllers.employee;
+package controllers.item;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class EmployeeHomeController {
+public class ItemHomeController {
 
-    public void btnOnActionAddEmployee(ActionEvent actionEvent) {
+    @FXML
+    void btnOnActionAddItems(ActionEvent event) {
         Stage stage = new Stage();
         try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../../view/addEmployee.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../../view/additem.fxml"))));
             stage.show();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public void btnOnActionViewUpdate(ActionEvent actionEvent) {
+    @FXML
+    void btnOnActionMangeItems(ActionEvent event) {
         Stage stage = new Stage();
         try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../../view/view_update_employee.fxml"))));
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../../view/manage_item.fxml"))));
             stage.show();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
+
 }

@@ -1,5 +1,5 @@
 package utill;
 
 public enum ServiceType {
-    EMPLOYEE,USER
+    EMPLOYEE,USER,ITEM
 }

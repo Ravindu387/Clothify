@@ -24,17 +24,17 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="22.0" layoutY="220.0" text="Name :" textFill="WHITE">
+      <Label layoutX="22.0" layoutY="196.0" text="Name :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="txtEtype" layoutX="77.0" layoutY="172.0" text="Admin" textFill="WHITE">
+      <Label fx:id="txtEtype" layoutX="77.0" layoutY="172.0" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="txtName" layoutX="76.0" layoutY="220.0" text="Ravindu Nimsara" textFill="WHITE">
+      <Label fx:id="txtName" layoutX="76.0" layoutY="196.0" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -45,16 +45,6 @@
          </font>
       </Label>
       <Line endX="100.0" layoutX="385.0" layoutY="74.0" startX="-100.0" stroke="#0d47a1" />
-      <Label layoutX="23.0" layoutY="196.0" text="E.ID    :" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
-      <Label fx:id="txtId" layoutX="76.0" layoutY="196.0" text="E000" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="14.0" />
-         </font>
-      </Label>
       <Label layoutX="31.0" layoutY="491.0" text="Date :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="23.0" />
@@ -75,17 +65,17 @@
             <Font name="System Bold" size="23.0" />
          </font>
       </Label>
-      <Label layoutX="22.0" layoutY="247.0" text="Email  :" textFill="WHITE">
+      <Label layoutX="22.0" layoutY="245.0" text="Email  :" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="txtEmail" layoutX="77.0" layoutY="247.0" text="ravindu@gmail.com" textFill="WHITE">
+      <Label fx:id="txtEmail" layoutX="77.0" layoutY="245.0" text="k" textFill="WHITE">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXButton layoutX="441.0" layoutY="224.0" prefHeight="55.0" prefWidth="243.0" style="-fx-background-color: #0d47a1; -fx-background-radius: 30;" text="ITEM" textFill="#fcfcfc">
+      <JFXButton layoutX="441.0" layoutY="224.0" onAction="#btnOnActionItem" prefHeight="55.0" prefWidth="243.0" style="-fx-background-color: #0d47a1; -fx-background-radius: 30;" text="ITEM" textFill="#fcfcfc">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -110,5 +100,15 @@
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
+      <Label layoutX="22.0" layoutY="221.0" text="Age    :" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="txtAge" layoutX="75.0" layoutY="221.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

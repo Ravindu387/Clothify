@@ -7,5 +7,5 @@ public interface EmployeeService extends SuperService {
 
     boolean addEmployee(Employee employee);
     String cheackEmail(String email,String password);
-
+    void setEmail(String email);
 }

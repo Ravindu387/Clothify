@@ -22,9 +22,8 @@ import java.sql.SQLException;
 import java.util.Base64;
 
 public class EmployeeServiceImpl implements EmployeeService {
-
-    private String email;
     private static EmployeeServiceImpl instance;
+    private String email;
     private static final String SECRET_KEY = "MySecretKey12345"; // 16 characters for AES
     private static final String ALGORITHM = "AES";
 
@@ -64,6 +63,12 @@ public class EmployeeServiceImpl implements EmployeeService {
         employeeDao.cheackEmail(email,password);
         return email;
 
+    }
+
+    @Override
+    public void setEmail(String email) {
+        EmployeeDao employeeDao = DaoFactory.getInstance().getDaoType(DaoType.EMPLOYEE);
+        employeeDao.setEmail(email);
     }
 
     public String validate(String validPassword, String passwordE) throws Exception {

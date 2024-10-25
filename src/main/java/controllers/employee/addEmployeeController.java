@@ -34,8 +34,8 @@ public class addEmployeeController implements Initializable {
     void btnOnActionAdd(ActionEvent event) {
         UserService userService = ServiceFactory.getInstance().getServiceType(ServiceType.USER);
         User user = new User(
-                txtName.getText(),
                 txtEmail.getText(),
+                txtName.getText(),
                 txtAge.getText(),
                 cmbEmployeeType.getValue().toString()
         );
@@ -45,6 +45,10 @@ public class addEmployeeController implements Initializable {
         }else {
             new Alert(Alert.AlertType.INFORMATION,"Employee Added !!").show();
         }
+        txtEmail.setText("");
+        txtName.setText("");
+        txtAge.setText("");
+        cmbEmployeeType.setValue("");
     }
 
     @Override

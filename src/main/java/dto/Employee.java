@@ -10,7 +10,6 @@ import lombok.ToString;
 @AllArgsConstructor
 @ToString
 public class Employee {
-    private String id;
     private String  fName;
     private String  email;
     private String  password;

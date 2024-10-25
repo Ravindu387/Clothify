@@ -1,6 +1,7 @@
 package service;
 
 import service.custom.impl.EmployeeServiceImpl;
+import service.custom.impl.ItemServiceImpl;
 import service.custom.impl.UserServiceImpl;
 import utill.ServiceType;
 
@@ -16,6 +17,7 @@ public class ServiceFactory {
         switch (type){
             case EMPLOYEE:return (T) new EmployeeServiceImpl();
             case USER:return (T) new UserServiceImpl();
+            case ITEM:return (T) new ItemServiceImpl();
         }
         return null;
     }

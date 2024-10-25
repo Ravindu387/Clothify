@@ -9,11 +9,9 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class User {
-    private String email;
-    private String fname;
-    private String age;
-    private String eType;
-
-
+public class Item {
+    private String itemCode;
+    private String description;
+    private int qyt;
+    private double unitPrice;
 }

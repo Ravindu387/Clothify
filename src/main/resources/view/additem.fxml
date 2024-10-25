@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="624.0" prefWidth="796.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.item.AddItemController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="624.0" prefWidth="796.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0d47a1" height="94.0" layoutX="-14.0" layoutY="-16.0" stroke="TRANSPARENT" strokeType="INSIDE" width="814.0" />
+            <JFXTextField fx:id="txtItemCode" alignment="CENTER" layoutX="240.0" layoutY="177.0" prefHeight="38.0" prefWidth="344.0" promptText="Item Code">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="296.0" text="Add Items" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="42.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtDescription" alignment="CENTER" layoutX="240.0" layoutY="255.0" prefHeight="44.0" prefWidth="344.0" promptText="Description">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtQty" alignment="CENTER" layoutX="240.0" layoutY="336.0" prefHeight="44.0" prefWidth="344.0" promptText="Qty On Hand">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton layoutX="305.0" layoutY="514.0" onAction="#btnOnActionAdd" prefHeight="44.0" prefWidth="196.0" style="-fx-background-color: #0d47a1; -fx-background-radius: 20;" text="ADD" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtUnitPrice" alignment="CENTER" layoutX="240.0" layoutY="419.0" prefHeight="44.0" prefWidth="344.0" promptText="UnitPrice">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
