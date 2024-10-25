@@ -31,8 +31,15 @@ public class EmployeeServiceImpl implements EmployeeService {
         SecretKeySpec key = new SecretKeySpec(SECRET_KEY.getBytes(), ALGORITHM);
         Cipher cipher = Cipher.getInstance(ALGORITHM);
         cipher.init(Cipher.DECRYPT_MODE, key);
-        byte[] decryptedBytes = cipher.doFinal(Base64.getDecoder().decode(encryptedPassword));
-        return new String(decryptedBytes);
+
+        try {
+            byte[] decryptedBytes = cipher.doFinal(Base64.getDecoder().decode(encryptedPassword));
+            return new String(decryptedBytes);
+        }catch (NullPointerException e){
+            new Alert(Alert.AlertType.WARNING,"Email not avalible..!").show();
+            return null;
+        }
+
     }
 
     public static String encrypt(String password) throws Exception {
@@ -59,8 +66,9 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public String cheackEmail(String email,String password) {
         EmployeeDao employeeDao = DaoFactory.getInstance().getDaoType(DaoType.EMPLOYEE);
-
         employeeDao.cheackEmail(email,password);
+
+
         return email;
 
     }

@@ -3,8 +3,10 @@ package repository.custom.impl;
 
 import db.DBConnection;
 import dto.Item;
+import dto.Supplier;
 import dto.User;
 import entity.EmployeeEntity;
+import entity.ItemEntity;
 import entity.UserEntity;
 import javafx.collections.ObservableList;
 import org.hibernate.Session;
@@ -111,6 +113,26 @@ public class EmployeeDaoImpl implements EmployeeDao {
     @Override
     public boolean updateItem(Item item) {
         return false;
+    }
+
+    @Override
+    public boolean delete(String supId) {
+        return false;
+    }
+
+    @Override
+    public boolean update(Supplier supplier) {
+        return false;
+    }
+
+    @Override
+    public ObservableList<ItemEntity> getItemCode() {
+        return null;
+    }
+
+    @Override
+    public ItemEntity searchItem(String itemCode) {
+        return null;
     }
 
 

@@ -1,5 +1,6 @@
 package controllers.dashboard;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import controllers.account.LoginPageController;
 import entity.UserEntity;
@@ -7,6 +8,7 @@ import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -20,12 +22,12 @@ import service.custom.UserService;
 import service.custom.impl.UserServiceImpl;
 import utill.ServiceType;
 
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.Date;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class EmployeeDashboard  implements Initializable{
@@ -53,6 +55,10 @@ public class EmployeeDashboard  implements Initializable{
     private JFXTextField txtSearch;
 
     private String enterEmail;
+
+    @FXML
+    private JFXButton btnEmployee;
+
 
 
     @Override
@@ -104,6 +110,11 @@ public class EmployeeDashboard  implements Initializable{
               txtName.setText(userEntity.getFname());
               txtAge.setText(userEntity.getAge());
               txtEtype.setText(userEntity.getEtype());
+        if ("USER".equalsIgnoreCase(txtEtype.getText().trim())) {
+            btnEmployee.setVisible(false);  // This will hide the button
+        } else {
+            btnEmployee.setVisible(true);   // This will show the button
+        }
 
     }
     private static EmployeeDashboard instance;
@@ -116,6 +127,26 @@ public class EmployeeDashboard  implements Initializable{
         Stage stage = new Stage();
         try {
             stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../../view/item_home.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void btnOnActionSupplier(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../../view/supplier_home.fxml"))));
+            stage.show();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void btnOnActionOrder(ActionEvent actionEvent) {
+        Stage stage = new Stage();
+        try {
+            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("../../view/placeOrder.fxml"))));
             stage.show();
         } catch (IOException e) {
             throw new RuntimeException(e);

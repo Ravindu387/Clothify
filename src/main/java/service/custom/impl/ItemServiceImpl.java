@@ -3,6 +3,7 @@ package service.custom.impl;
 import dto.Item;
 import entity.ItemEntity;
 import entity.UserEntity;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.modelmapper.ModelMapper;
 import repository.DaoFactory;
@@ -41,5 +42,24 @@ public class ItemServiceImpl implements ItemService {
         ItemDao itemDao = DaoFactory.getInstance().getDaoType(DaoType.ITEM);
         itemDao.updateItem(item);
         return true;
+    }
+
+    @Override
+    public ObservableList<String> getItemCode() {
+        ObservableList<String> itemCodes = FXCollections.observableArrayList();
+        ItemDao itemDao = DaoFactory.getInstance().getDaoType(DaoType.ITEM);
+        ObservableList<ItemEntity> all = itemDao.getItemCode();
+
+        all.forEach(item->{
+            itemCodes.add(item.getItemCode());
+        });
+        return itemCodes;
+    }
+
+    @Override
+    public ItemEntity searchItem(String itemCode) {
+        ItemDao itemDao = DaoFactory.getInstance().getDaoType(DaoType.ITEM);
+        ItemEntity entity = itemDao.searchItem(itemCode);
+        return entity;
     }
 }

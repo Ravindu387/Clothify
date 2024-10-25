@@ -10,4 +10,6 @@ public interface ItemService extends SuperService {
     ObservableList<ItemEntity> getAll();
     boolean deleteItem(String code);
     boolean updateItem(Item item);
+    ObservableList<String> getItemCode();
+    ItemEntity searchItem(String newVal);
 }

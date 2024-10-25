@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -54,6 +55,8 @@ public class LoginPageController{
         String password = txtPassword.getText();
         employeeService.setEmail(email);
         employeeService.cheackEmail(email,password);
+
+
         txtEmail.setText("");
         txtPassword.setText("");
 

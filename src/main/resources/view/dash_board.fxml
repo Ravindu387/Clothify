@@ -75,27 +75,22 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <JFXButton layoutX="441.0" layoutY="224.0" onAction="#btnOnActionItem" prefHeight="55.0" prefWidth="243.0" style="-fx-background-color: #0d47a1; -fx-background-radius: 30;" text="ITEM" textFill="#fcfcfc">
+      <JFXButton layoutX="450.0" layoutY="256.0" onAction="#btnOnActionItem" prefHeight="55.0" prefWidth="243.0" style="-fx-background-color: #0d47a1; -fx-background-radius: 30;" text="ITEM" textFill="#fcfcfc">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="441.0" layoutY="300.0" prefHeight="55.0" prefWidth="243.0" style="-fx-background-color: #0d47a1; -fx-background-radius: 30;" text="SUPPLIER" textFill="#fcfcfc">
+      <JFXButton layoutX="450.0" layoutY="332.0" onAction="#btnOnActionSupplier" prefHeight="55.0" prefWidth="243.0" style="-fx-background-color: #0d47a1; -fx-background-radius: 30;" text="SUPPLIER" textFill="#fcfcfc">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="441.0" layoutY="376.0" onAction="#btnOnActionEmployee" prefHeight="55.0" prefWidth="243.0" style="-fx-background-color: #0d47a1; -fx-background-radius: 30;" text="EMPLOYEE" textFill="#fcfcfc">
+      <JFXButton fx:id="btnEmployee" layoutX="450.0" layoutY="408.0" onAction="#btnOnActionEmployee" prefHeight="55.0" prefWidth="243.0" style="-fx-background-color: #0d47a1; -fx-background-radius: 30;" text="EMPLOYEE" textFill="#fcfcfc">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </JFXButton>
-      <JFXButton layoutX="441.0" layoutY="150.0" prefHeight="55.0" prefWidth="243.0" style="-fx-background-color: #0d47a1; -fx-background-radius: 30;" text="ORDERS" textFill="#fcfcfc">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font>
-      </JFXButton>
-      <JFXButton layoutX="441.0" layoutY="452.0" prefHeight="55.0" prefWidth="243.0" style="-fx-background-color: #0d47a1; -fx-background-radius: 30;" text="REPORTS" textFill="#fcfcfc">
+      <JFXButton layoutX="450.0" layoutY="182.0" onAction="#btnOnActionOrder" prefHeight="55.0" prefWidth="243.0" style="-fx-background-color: #0d47a1; -fx-background-radius: 30;" text="ORDERS" textFill="#fcfcfc">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>

@@ -2,6 +2,7 @@ package repository.custom.impl;
 
 import db.DBConnection;
 import dto.Item;
+import dto.Supplier;
 import dto.User;
 import entity.ItemEntity;
 import entity.UserEntity;
@@ -9,6 +10,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.hibernate.Session;
 import repository.custom.ItemDao;
+import utill.CrudUtil;
 import utill.HibernateUtil;
 
 import java.sql.Connection;
@@ -119,6 +121,58 @@ public class ItemDaoImpl implements ItemDao {
         }
 
         return true;
+    }
+
+    @Override
+    public boolean delete(String supId) {
+        return false;
+    }
+
+    @Override
+    public boolean update(Supplier supplier) {
+        return false;
+    }
+
+    @Override
+    public ObservableList<ItemEntity> getItemCode() {
+        String SQl = "SELECT * FROM itementity";
+        ObservableList<ItemEntity> itemObservableList = FXCollections.observableArrayList();
+        try {
+            ResultSet resultSet = CrudUtil.execute(SQl);
+
+            while (resultSet.next()) {
+                itemObservableList.add(new ItemEntity(
+                        resultSet.getString(1),
+                        resultSet.getString(2),
+                        resultSet.getInt(3),
+                        resultSet.getDouble(4)
+                ));
+            }
+            System.out.println(itemObservableList);
+            return itemObservableList;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public ItemEntity searchItem(String itemCode) {
+        String SQl = "SELECT * FROM itementity WHERE itemCode=?";
+        try {
+            ResultSet resultSet = CrudUtil.execute(SQl, itemCode);
+            while (resultSet.next()) {
+                return new ItemEntity(
+                        resultSet.getString(1),
+                        resultSet.getString(2),
+                        resultSet.getInt(3),
+                        resultSet.getDouble(4)
+                );
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return null;
     }
 
 

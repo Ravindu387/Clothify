@@ -1,7 +1,10 @@
 package repository;
 
 import dto.Item;
+import dto.OrderDetails;
+import dto.Supplier;
 import dto.User;
+import entity.ItemEntity;
 import entity.UserEntity;
 import javafx.collections.ObservableList;
 
@@ -15,4 +18,9 @@ public interface CrudRepository<T> extends SuperDao{
     void setEmail(String email);
     boolean deleteItem(String code);
     boolean updateItem(Item item);
+    boolean delete(String supId);
+    boolean update(Supplier supplier);
+    ObservableList<ItemEntity> getItemCode();
+    ItemEntity searchItem(String itemCode);
+
 }

@@ -1,5 +1,5 @@
 package utill;
 
 public enum DaoType {
-    EMPLOYEE,USER,ITEM
+    EMPLOYEE,USER,ITEM,SUPPLIER,ORDERDETAILS
 }
